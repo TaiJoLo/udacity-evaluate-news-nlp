@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">NewsEval</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Evaluate a News Article with Natural Language Processing</h1>
+      <section>
+        <p>Simply paste the article you want to evaluate in the form below:</p>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            id="text"
+            type="text"
+            name="input"
+            value=""
+            onblur="onBlur()"
+            placeholder="Text"
+            required
+          />
+          <button
+            id="submit"
+            type="submit"
+            name="submit"
+            value="submit"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          >
+            Evaluate
+          </button>
+        </form>
+      </section>
+
+      <section id="results">
+        <h2>Results:</h2>
+        <div>Agreement: <span id="agreement"></span></div>
+        <div>Confidence: <span id="confidence"></span></div>
+        <div>Irony: <span id="irony"></span></div>
+        <div>Score Tag: <span id="score_tag"></span></div>
+        <div>Subjectivity: <span id="subjectivity"></span></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 NewsEval</p>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
