@@ -23,15 +23,16 @@
       <section>
         <p>Simply paste the article you want to evaluate in the form below:</p>
         <form class="" onsubmit="return Client.handleSubmit(event)">
-          <input
+          <textarea
             id="text"
             type="text"
             name="input"
             value=""
             onblur="onBlur()"
-            placeholder="Text"
+            placeholder="Paste Article Here"
             required
-          />
+          >
+          </textarea>
           <button
             id="submit"
             type="submit"
