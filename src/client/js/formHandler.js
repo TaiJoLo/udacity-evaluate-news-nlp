@@ -1,3 +1,6 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -19,8 +22,6 @@ function handleSubmit(event) {
       console.log(data);
       const apiKey = data.apiKey;
 
-      console.log(`API key is ${apiKey}`);
-
       const formdata = new FormData();
       formdata.append("key", apiKey);
       formdata.append("txt", formText);
@@ -38,12 +39,10 @@ function handleSubmit(event) {
         requestOptions
       );
     })
-    .then((response) => ({
-      status: response.status,
-      body: response.json(),
-    }))
+    .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      console.log(data.agreement);
       document.getElementById("agreement").innerHTML = data.agreement;
       document.getElementById("confidence").innerHTML = data.confidence;
       document.getElementById("irony").innerHTML = data.irony;

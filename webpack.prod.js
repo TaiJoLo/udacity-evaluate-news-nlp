@@ -29,6 +29,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
     new WorkboxPlugin.GenerateSW(),
+    // new GenerateSW({
+    //   swDest: "./dist/sw.js",
+    // }),
   ],
   output: {
     libraryTarget: "var",
