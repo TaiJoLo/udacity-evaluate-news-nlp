@@ -13,7 +13,7 @@ function handleSubmit(event) {
 
   console.log("::: Form Submitted :::");
 
-  fetch("/api/key") // Replace "/api/key" with the endpoint that returns the API key
+  fetch("/api/key")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -38,7 +38,10 @@ function handleSubmit(event) {
         requestOptions
       );
     })
-    .then((response) => response.json())
+    .then((response) => ({
+      status: response.status,
+      body: response.json(),
+    }))
     .then((data) => {
       console.log(data);
       document.getElementById("agreement").innerHTML = data.agreement;

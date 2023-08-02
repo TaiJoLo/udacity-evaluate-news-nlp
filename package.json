@@ -8,9 +8,6 @@
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
-  "engines": {
-    "node": "^14.21.3"
-  },
   "engineStrict": true,
   "keywords": [],
   "author": "",
@@ -36,6 +33,7 @@
     "style-loader": "^0.23.1",
     "tailwindcss": "^3.3.3",
     "terser-webpack-plugin": "^1.4.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }
