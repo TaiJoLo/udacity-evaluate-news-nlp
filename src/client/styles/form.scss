@@ -1,18 +1,18 @@
 form {
   border: 1px solid #545454;
+  width: 800px;
   border-radius: 3px;
   padding: 40px;
   display: flex;
   flex-direction: column;
 
-  textarea {
+  input {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
     word-wrap: break-word;
     resize: none;
     width: 100%;
-    min-height: 100px;
   }
 
   button {

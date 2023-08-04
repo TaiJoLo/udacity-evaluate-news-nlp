@@ -1,4 +1,4 @@
-import { checkForName } from "./js/nameChecker";
+import { isValidHttpUrl } from "./js/isValidHttpUrl";
 import { handleSubmit } from "./js/formHandler";
 
 import "./styles/resets.scss";
@@ -9,8 +9,8 @@ import "./styles/header.scss";
 import "./styles/logo.scss";
 import "./styles/results.scss";
 
-console.log(checkForName);
+console.log(isValidHttpUrl);
 
 console.log("CHANGE!!");
 
-export { checkForName, handleSubmit };
+export { isValidHttpUrl, handleSubmit };

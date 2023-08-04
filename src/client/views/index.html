@@ -9,30 +9,26 @@
     <header>
       <div class="logo">NewsEval</div>
       <nav>
-        <ul>
+        <!-- <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
 
     <main>
       <h1>Evaluate a News Article with Natural Language Processing</h1>
       <section>
-        <p>Simply paste the article you want to evaluate in the form below:</p>
         <form class="" onsubmit="return Client.handleSubmit(event)">
-          <textarea
-            id="text"
-            type="text"
-            name="input"
-            value=""
-            onblur="onBlur()"
-            placeholder="Paste Article Here"
+          <input
+            id="url"
+            type="url"
+            name="url"
+            placeholder="https://example.com"
             required
-          >
-          </textarea>
+          />
           <button
             id="submit"
             type="submit"

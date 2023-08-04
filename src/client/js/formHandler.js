@@ -1,18 +1,19 @@
 const dotenv = require("dotenv");
 dotenv.config();
+import { isValidHttpUrl } from "./isValidHttpUrl";
 
 function handleSubmit(event) {
   event.preventDefault();
 
   // check what text was put into the form field
-  let formText = document.getElementById("text").value;
+  let formText = document.getElementById("url").value;
 
   // Check if the input is blank
   if (formText.trim() === "") {
-    alert("Please enter some text");
+    alert("Please enter url");
     return;
   }
-  Client.checkForName(formText);
+  Client.isValidHttpUrl(formText);
 
   console.log("::: Form Submitted :::");
 
