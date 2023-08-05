@@ -8,6 +8,9 @@
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
+  "engines": {
+    "node": "14.21.3"
+  },
   "engineStrict": true,
   "keywords": [],
   "author": "",
