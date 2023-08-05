@@ -18,6 +18,7 @@ function handleSubmit(event) {
   console.log("::: Form Submitted :::");
 
   fetch("/api/key")
+    // get api key from server
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
