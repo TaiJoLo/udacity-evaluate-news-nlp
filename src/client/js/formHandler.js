@@ -1,4 +1,5 @@
 import { isValidHttpUrl } from "./isValidHttpUrl";
+const backend_api = "https://newseval.onrender.com/api/key";
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -15,7 +16,7 @@ function handleSubmit(event) {
 
   console.log("::: Form Submitted :::");
 
-  fetch("/api/key")
+  fetch(backend_api)
     // get api key from server
     .then((response) => response.json())
     .then((data) => {
