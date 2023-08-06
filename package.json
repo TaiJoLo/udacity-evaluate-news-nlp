@@ -18,9 +18,7 @@
     "express": "^4.17.1",
     "jest-fetch-mock": "^3.0.3",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
-  },
-  "devDependencies": {
+    "webpack-cli": "^3.3.5",
     "@babel/core": "^7.13.15",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-env": "^7.13.15",
