@@ -1,5 +1,3 @@
-const dotenv = require("dotenv");
-dotenv.config();
 import { isValidHttpUrl } from "./isValidHttpUrl";
 
 function handleSubmit(event) {
