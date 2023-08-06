@@ -25,8 +25,8 @@ function handleSubmit(event) {
 
       const formdata = new FormData();
       formdata.append("key", apiKey);
-      formdata.append("txt", formText);
-      formdata.append("lang", "en");
+      formdata.append("url", formText);
+      formdata.append("lang", "auto");
 
       console.log(formdata);
       const requestOptions = {
