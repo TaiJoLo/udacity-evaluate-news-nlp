@@ -49,6 +49,8 @@ function handleSubmit(event) {
       document.getElementById("irony").innerHTML = data.irony;
       document.getElementById("score_tag").innerHTML = data.score_tag;
       document.getElementById("subjectivity").innerHTML = data.subjectivity;
+      document.getElementById("text_snippet").innerHTML =
+        data.sentence_list[0].text;
     })
     .catch((error) => console.log("error", error));
 }
