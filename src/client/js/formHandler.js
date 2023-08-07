@@ -20,7 +20,7 @@ function handleSubmit(event) {
     // get api key from server
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const apiKey = data.apiKey;
 
       const formdata = new FormData();
@@ -28,7 +28,7 @@ function handleSubmit(event) {
       formdata.append("url", formText);
       formdata.append("lang", "auto");
 
-      console.log(formdata);
+      // console.log(formdata);
       const requestOptions = {
         method: "POST",
         body: formdata,
@@ -42,8 +42,8 @@ function handleSubmit(event) {
     })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      console.log(data.agreement);
+      // console.log(data);
+      // console.log(data.agreement);
       document.getElementById("agreement").innerHTML = data.agreement;
       document.getElementById("confidence").innerHTML = data.confidence;
       document.getElementById("irony").innerHTML = data.irony;

@@ -9,8 +9,8 @@ import "./styles/header.scss";
 import "./styles/logo.scss";
 import "./styles/results.scss";
 
-console.log(isValidHttpUrl);
+// console.log(isValidHttpUrl);
 
-console.log("CHANGE!!");
+// console.log("CHANGE!!");
 
 export { isValidHttpUrl, handleSubmit };
